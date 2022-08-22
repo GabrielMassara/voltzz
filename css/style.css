@@ -1,0 +1,115 @@
+.tabela-info{
+    animation-name: tabela;
+    animation-duration: 2s;
+}
+.calculo{
+    background-color: rgba(0, 0, 0, 20%);
+    border-radius: 10px;
+    animation-duration: 1s;
+    animation-name: calculo;
+}
+
+.energy-2 {
+    background-color: rgba(0, 0, 0, 20%);
+    width: 300px;
+    border-radius: 10px;
+    left: 20px;
+    animation-name: card-popup2;
+    animation-duration: 1s;
+    height: 490px;
+    color: white;
+}
+
+.division-bar{
+    background-color: white;
+    height: 2px;
+    width: 200px;
+    border-radius: 5px;
+    animation-name: division-bar;
+    animation-duration: 2s;
+}
+
+.division-bar2{
+    background-color: white;
+    height: 2px;
+    width: 40%;
+    border-radius: 5px;
+    animation-name: division-bar2;
+    animation-duration: 2s;
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 40%);
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 1em rgba(255, 255, 255, 30%);
+}
+
+button{
+    background-color: rgba(0, 0, 0, 0%);
+    border-color: rgba(0, 0, 0, 0%);
+    color: aliceblue;
+}
+.energy-1 {
+    background-color: rgba(0, 0, 0, 20%);
+    width: 300px;
+    border-radius: 10px;
+    left: 20px;
+    animation-name: card-popup;
+    animation-duration: 2s;
+    height: 417px;
+}
+
+.energy-card {
+    margin-top: 10vh;
+}
+
+.title {
+    animation-name: title;
+    animation-duration: 2s;
+    margin-top: 15px;
+}
+
+h1{
+    color: gwhite;
+}
+
+@keyframes title{
+    0%{opacity: 0; margin-left: -50px;}
+    100%{opacity: 1; margin-left: 0px;}
+}
+
+@keyframes division-bar{
+    0%{opacity: 0; width: 0px; height: 30px;}
+    100%{opacity: 1; width: 200px; height: 2px;}
+}
+
+@keyframes division-bar2{
+    0%{opacity: 0; width: 0%; height: 30px;}
+    100%{opacity: 1; width: 40; height: 2px;}
+}
+
+@keyframes all-energy{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes card-popup{
+    0%{opacity: 0; height: 0px;}
+    100%{opacity: 1; height: 417px;}
+}
+
+@keyframes card-popup2{
+    0%{height: 417px;}
+    100%{height: 490px;}
+}
+
+@keyframes calculo{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes tabela{
+    0%{opacity: 0; margin-left: -50px;}
+    100%{opacity: 1; margin-left: 0;}
+}
