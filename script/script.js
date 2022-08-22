@@ -1,5 +1,5 @@
-function card1(){
-    document.getElementById('content1').innerHTML=`<div class="energy-2">
+function card1() {
+    document.getElementById('content1').innerHTML = `<div class="energy-2">
     <br>
     <h5 style="color: aliceblue;">Maremotriz</h5>
     <img src="files/img/maremotriz.png" alt="" width="300px">
@@ -7,8 +7,8 @@ function card1(){
 </div>`
 }
 
-function card2(){
-    document.getElementById('content2').innerHTML=`<div class="energy-2">
+function card2() {
+    document.getElementById('content2').innerHTML = `<div class="energy-2">
     <br>
     <h5 style="color: aliceblue;">Eólica</h5>
     <img src="files/img/eolica.png" alt="" width="300px">
@@ -16,8 +16,8 @@ function card2(){
 </div>`
 }
 
-function card3(){
-    document.getElementById('content3').innerHTML=`<div class="energy-2">
+function card3() {
+    document.getElementById('content3').innerHTML = `<div class="energy-2">
     <br>
     <h5 style="color: aliceblue;">Solar</h5>
     <img src="files/img/solar.png" alt="" width="300px">
@@ -25,8 +25,10 @@ function card3(){
 </div>`
 }
 
-function calcular(){
-    document.getElementById('tabela').innerHTML=`<div class="tabela-info">
+function calcular() {
+    conta = Number(document.getElementById('conta').value)
+    if (document.getElementById('conta').value != '') {
+        document.getElementById('tabela').innerHTML = `<div class="tabela-info">
     <section>
         <div class="row">
             <div class="col-4"><img src="files/img/solar.png" alt="" width="120%"></div>
@@ -81,10 +83,19 @@ function calcular(){
                 </div>
     </section>
 </div>`
-    conta= Number(document.getElementById('conta').value)
-    document.getElementById('1_32').innerHTML=`<h5>> Gerador de 1,32kWp: ` + (3500/conta).toFixed(0) + ` meses.</h5>`
-    document.getElementById('5_28').innerHTML=`<h5>> Gerador de 5,28kWp: ` + (8800/conta).toFixed(0) + ` meses.</h5>`
-    document.getElementById('10_56').innerHTML=`<h5>> Gerador de 10,56kWp: ` + (15000/conta).toFixed(0) + ` meses.</h5>`
-    document.getElementById('dias_eolica').innerHTML=`<h5>> Em ` + (30000/conta).toFixed(0) + ` meses, o valor do investimento será pago.</h5>`
-    document.getElementById('dias_maremotriz').innerHTML=`<h5>> Em ` + (3000000/conta).toFixed(0) + ` meses, o valor do investimento será pago.</h5>`
+        document.getElementById('1_32').innerHTML = `<h5>> Gerador de 1,32kWp: ` + (3500 / conta).toFixed(0) + ` meses.</h5>`
+        document.getElementById('5_28').innerHTML = `<h5>> Gerador de 5,28kWp: ` + (8800 / conta).toFixed(0) + ` meses.</h5>`
+        document.getElementById('10_56').innerHTML = `<h5>> Gerador de 10,56kWp: ` + (15000 / conta).toFixed(0) + ` meses.</h5>`
+        document.getElementById('dias_eolica').innerHTML = `<h5>> Em ` + (30000 / conta).toFixed(0) + ` meses, o valor do investimento será pago.</h5>`
+        document.getElementById('dias_maremotriz').innerHTML = `<h5>> Em ` + (3000000 / conta).toFixed(0) + ` meses, o valor do investimento será pago.</h5>`
+    } else {
+        document.getElementById("user_input").innerHTML=`<div class="input-group" style="width: 300px; border-color: red; border-width: 5px; border-style: groove; border-radius: 10px;">
+        <div class="input-group-prepend">
+            <span class="input-group-text"
+                style="color: rgba(13,15,92,1); border-radius: 5px 0px 0px 5px;">Conta de Luz:</span>
+        </div>
+        <input type="number" id="conta" class="form-control" aria-label="With textarea"
+            placeholder="R$"></input>
+    </div>`
+    }
 }
